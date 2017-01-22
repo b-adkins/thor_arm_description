@@ -1,0 +1,31 @@
+<robot name="thor">
+    <link name="base">
+      <visual>
+	<origin xyz="0 0 0" rpy="0 0 0"/>
+	<geometry>
+	  <mesh filename="package://thor_arm_description/meshes/base.stl" scale="0.001 0.001 0.001" />
+	</geometry>
+      </visual>
+    </link>
+
+    <joint name="art1_yaw" type="revolute">
+      <origin xyz="0 0 0.104" rpy="0 -1.5707963267948966 0"/>
+      <parent link="base"/>
+      <child link="art1"/>
+      <limit lower="-3.1415" upper="3.1415" effort="4" velocity="1" />
+    </joint>
+
+    <link name="art1">
+      <inertial>
+	<origin xyz="0 0 0" rpy="0 1.5707963267948966 0" />
+	<mass value="1"/>
+	<inertia ixx="100"  ixy="0"  ixz="0" iyy="100" iyz="0" izz="100" />
+      </inertial>
+      <visual>
+	<origin xyz="0 0 0" rpy="0 1.5707963267948966 0" />
+	<geometry>
+	  <mesh filename="package://thor_arm_description/meshes/art1.stl" scale="0.001 0.001 0.001" />
+	</geometry>
+      </visual>
+    </link>
+</robot>

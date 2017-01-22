@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package>
+  <name>thor_arm_description</name>
+  <version>0.0.0</version>
+  <description>
+    URDF (and SRDF) description of open-source Thor robot arm.
+  </description>
+
+  <author email="boone.adkins@gmail.com">Boone Adkins</author>
+  <maintainer email="boone.adkins@gmail.com">Boone Adkins</maintainer>
+  <license>GPL</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+</package>
