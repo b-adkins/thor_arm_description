@@ -76,4 +76,21 @@
       </visual>
     </link>
 
+    <joint name="art5_pitch" type="revolute">
+        <origin xyz="0 0 0.1" rpy="0 -1.5707963267948966 0"/>
+	<axis xyz="0 0 1"/>
+	<parent link="art4"/>
+        <child link="art5"/>
+	<limit lower="-1.5707963267948966" upper="1.5707963267948966" effort="4" velocity="1" />
+    </joint>
+
+    <link name="art5">
+      <visual>
+	<origin xyz="0 0 0" rpy="0 0 0" />
+	<geometry>
+	  <mesh filename="package://thor_arm_description/meshes/art5.stl" scale="0.001 0.001 0.001" />
+	</geometry>
+      </visual>
+    </link>
+
 </robot>
